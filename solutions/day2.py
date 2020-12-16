@@ -16,7 +16,7 @@ def part_one():
 				count += 1
 		if min_ <= count <= max_:
 			valid += 1
-	print(valid)
+	print("Solution:", valid)
 
 def part_two():
 	valid = 0
@@ -29,7 +29,7 @@ def part_two():
 		if (password[pos1] == char or password[pos2] == char) and not (password[pos1] == char and password[pos2] == char):
 			valid += 1
 
-	print(valid)
+	print("Solution:", valid)
 
 def main():
 	part_two()
