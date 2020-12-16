@@ -7,5 +7,6 @@ def read_input(day):
 		os.chdir('..')
 		os.system(f'sh download.sh {day}')
 		os.chdir('solutions')
-	inputs = np.genfromtxt(DATA_PATH)
+	with open(DATA_PATH) as file:
+		inputs = file.readlines()
 	return inputs
