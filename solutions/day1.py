@@ -2,7 +2,7 @@ from util.read_input import read_input
 import numpy as np
 
 DAY = 1
-nums = read_input(DAY)
+nums = read_input(DAY, integers = True)
 
 def two_sum(nums, target = 2020):
 	# returns two elements from nums that sum to 2020
@@ -31,7 +31,6 @@ def main():
 	print(a, b, f"product {a*b}")
 	a, b, c = three_sum(nums)
 	print(a, b, c, f'product {a*b*c}')
-
 
 if __name__ == "__main__":
 	main()
