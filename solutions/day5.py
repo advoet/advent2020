@@ -16,14 +16,6 @@ def part_one(inputs):
 			highest_ID = ID
 	print('Highest ID', highest_ID)
 
-def _find_missing(ids):
-	# deprecated
-	low = min(ids)
-	high = max(ids)
-	total = ((high - low) + 1 ) * (low + high) / 2
-	actual_total = sum(ids)
-	return total - actual_total
-
 def part_two():
 	# big data style, probably better to load batches
 	min_id = 8*ROWS + COLS
@@ -63,6 +55,15 @@ def id_generator(inputs):
 			for i in range(7, 10):
 				(left, right) = (left, (right + left) // 2) if seat[i] == 'F' else ((right + left) // 2 + 1, right)
 			yield 8*lo + left
+
+
+def _find_missing(ids):
+	# deprecated
+	low = min(ids)
+	high = max(ids)
+	total = ((high - low) + 1 ) * (low + high) / 2
+	actual_total = sum(ids)
+	return total - actual_total
 
 def main():
 	part_two(inputs)
